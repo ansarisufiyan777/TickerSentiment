@@ -1,19 +1,21 @@
-import json, requests
+import json
+import requests
 import uuid
+
 from elasticsearch import Elasticsearch
 
 from util.config import Config
 
-end_point = Config.getAwsConfig()
+end_point = Config.get_aws_config()
 
 
-class AwsMessages:
+class AwsMessage:
     twitter_mapping = "tweet"
     financials_mapping = "finance"
     stocks_mapping = "stock"
-
+    logger = Config.get_logger()
     twitter_index = "twitter/%s" % twitter_mapping
-    stock_index = "stocks/%s" % stocks_mapping
+    stock_index = "stocks_data.py/%s" % stocks_mapping
     financials_index = "financials/%s" % financials_mapping
 
     twitter_address = '%s/%s/' % (end_point, twitter_index)
@@ -21,21 +23,23 @@ class AwsMessages:
     finance_address = '%s/%s/' % (end_point, financials_index)
 
     @classmethod
-    def upload_msg(cls, msg, index, mapping):
+    def upload_msg(cls, msg, address):
         print('saving tweets...')
         data = ''
         data += '{"index": {"_id": "%s"}}\n' % uuid.uuid4().hex
         data += json.dumps(msg) + '\n'
-        address = '%s/%s/%s' % (end_point, index, mapping)
         # Upload tweets to elasticsearch
         print('uploading to databse...')
-        upload_address = '%s/_bulk' % address
-        response = requests.put(upload_address, data=data)
+        upload_address = '%s_bulk' % address
+        print('URL', upload_address)
+        response = requests.put(upload_address, data=data,
+                                headers={"content-type": "application/json"})
+        AwsMessage.logger.info('elasticsearch response: %s' % response)
         print('upload success')
         print('elasticsearch response: %s' % response)
 
     @classmethod
-    def create_index(cls):
+    def create_twitter_index(cls):
         data = {
             "settings": {
                 "number_of_shards": 2,
@@ -186,21 +190,20 @@ class AwsMessages:
         client.indices.delete(index='tweet', ignore=[400, 404])
         client.indices.delete(index='twitter', ignore=[400, 404])
         client.indices.delete(index='financials', ignore=[400, 404])
-        client.indices.delete(index='stocks', ignore=[400, 404])
+        client.indices.delete(index='stocks_data.py', ignore=[400, 404])
         print(client.info())
 
     @classmethod
-    def download_msg(cls,index,mapping):
+    def download_msg(cls, address):
         data = {
             "size": 2000,
 
             "query": {
-                "query_string": {"query": "msft"}
-            },
-            "sort": {"LastTradeDateTime": {"order": "desc"}}
+                "query_string": {"query": "MSFT"}
+            }
 
         }
-        search_address = '%s/%s/%s/_search' % (end_point,index,mapping)
+        search_address = '%s_search' % address
         headers = {'Content-type': 'application/json', 'charset': 'UTF-8'}
         response = requests.post(search_address, data=json.dumps(data), headers=headers)
         result = response.json()
@@ -210,6 +213,8 @@ class AwsMessages:
 
 if __name__ == '__main__':
     # AwsMessages.delete_index()
-    AwsMessages.create_index()
-    AwsMessages.financials_index()
-    AwsMessages.stock_index()
+    # AwsMessage.create_twitter_index()
+    # AwsMessage.financials_index()
+    # AwsMessage.stock_index()
+
+    AwsMessage.download_msg(AwsMessage.twitter_address)

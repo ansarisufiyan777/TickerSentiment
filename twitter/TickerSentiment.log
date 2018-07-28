@@ -1,27 +1,348 @@
-2018-07-22 01:21:42,938 Signing request <PreparedRequest [POST]> using client <Client client_key=SdxSWBHuuuQKtjSSsPhQZOSif, client_secret=****, resource_owner_key=743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
-2018-07-22 01:21:42,938 Including body in call to sign: True
-2018-07-22 01:21:42,938 Collected params: [('delimited', 'length'), ('oauth_nonce', '5288057440357265961532202702'), ('oauth_timestamp', '1532202702'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'SdxSWBHuuuQKtjSSsPhQZOSif'), ('oauth_token', '743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN'), ('track', 'Google,Facebook,Apple,Amazon,Linked,Microsoft,Bloomberg,Tweet,Tesla'), ('language', 'en')]
-2018-07-22 01:21:42,938 Normalized params: delimited=length&language=en&oauth_consumer_key=SdxSWBHuuuQKtjSSsPhQZOSif&oauth_nonce=5288057440357265961532202702&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1532202702&oauth_token=743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN&oauth_version=1.0&track=Google%2CFacebook%2CApple%2CAmazon%2CLinked%2CMicrosoft%2CBloomberg%2CTweet%2CTesla
-2018-07-22 01:21:42,938 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
-2018-07-22 01:21:42,954 Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26oauth_consumer_key%3DSdxSWBHuuuQKtjSSsPhQZOSif%26oauth_nonce%3D5288057440357265961532202702%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1532202702%26oauth_token%3D743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN%26oauth_version%3D1.0%26track%3DGoogle%252CFacebook%252CApple%252CAmazon%252CLinked%252CMicrosoft%252CBloomberg%252CTweet%252CTesla
-2018-07-22 01:21:42,954 Signature: zcF1xpNuQDJh1s6ninxqMVy/qzI=
-2018-07-22 01:21:42,954 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
-2018-07-22 01:21:42,954 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '101', 'Authorization': 'OAuth oauth_nonce="5288057440357265961532202702", oauth_timestamp="1532202702", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="SdxSWBHuuuQKtjSSsPhQZOSif", oauth_token="743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN", oauth_signature="zcF1xpNuQDJh1s6ninxqMVy%2FqzI%3D"'}
-2018-07-22 01:21:42,954 Updated body: 'track=Google%2CFacebook%2CApple%2CAmazon%2CLinked%2CMicrosoft%2CBloomberg%2CTweet%2CTesla&language=en'
-2018-07-22 01:21:42,954 Starting new HTTPS connection (1): stream.twitter.com:443
-2018-07-22 01:21:44,887 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
-2018-07-22 01:21:58,844 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:00,195 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:23,818 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:25,309 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:25,340 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:27,024 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:27,040 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:29,177 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:29,224 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:31,629 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:31,676 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:33,280 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:33,312 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
-2018-07-22 01:22:34,817 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /tweet/twitter/_bulk HTTP/1.1" 406 55
-2018-07-22 01:22:34,848 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:30,449 Signing request <PreparedRequest [POST]> using client <Client client_key=SdxSWBHuuuQKtjSSsPhQZOSif, client_secret=****, resource_owner_key=743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2018-07-28 17:05:30,452 Including body in call to sign: True
+2018-07-28 17:05:30,467 Collected params: [('delimited', 'length'), ('oauth_nonce', '35351924683249598381532777730'), ('oauth_timestamp', '1532777730'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'SdxSWBHuuuQKtjSSsPhQZOSif'), ('oauth_token', '743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN'), ('track', 'Z,Y,L,O,G'), ('language', 'en')]
+2018-07-28 17:05:30,473 Normalized params: delimited=length&language=en&oauth_consumer_key=SdxSWBHuuuQKtjSSsPhQZOSif&oauth_nonce=35351924683249598381532777730&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1532777730&oauth_token=743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN&oauth_version=1.0&track=Z%2CY%2CL%2CO%2CG
+2018-07-28 17:05:30,475 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2018-07-28 17:05:30,483 Signing: signature base string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26oauth_consumer_key%3DSdxSWBHuuuQKtjSSsPhQZOSif%26oauth_nonce%3D35351924683249598381532777730%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1532777730%26oauth_token%3D743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN%26oauth_version%3D1.0%26track%3DZ%252CY%252CL%252CO%252CG
+2018-07-28 17:05:30,487 Signature: N9jBvQ5+NHGd+kyKQgCUfcOR/Hw=
+2018-07-28 17:05:30,497 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2018-07-28 17:05:30,505 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '35', 'Authorization': 'OAuth oauth_nonce="35351924683249598381532777730", oauth_timestamp="1532777730", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="SdxSWBHuuuQKtjSSsPhQZOSif", oauth_token="743789677715460096-6bhvelwPZlPSZVjcRVDMkIWkL1ZWanN", oauth_signature="N9jBvQ5%2BNHGd%2BkyKQgCUfcOR%2FHw%3D"'}
+2018-07-28 17:05:30,508 Updated body: 'track=Z%2CY%2CL%2CO%2CG&language=en'
+2018-07-28 17:05:30,583 Starting new HTTPS connection (1): stream.twitter.com:443
+2018-07-28 17:05:31,696 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2018-07-28 17:05:32,974 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:36,387 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:40,191 elasticsearch response: <Response [200]>
+2018-07-28 17:05:40,304 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:41,434 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:44,570 elasticsearch response: <Response [200]>
+2018-07-28 17:05:44,662 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:45,743 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:47,500 elasticsearch response: <Response [200]>
+2018-07-28 17:05:47,600 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:48,751 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:48,775 elasticsearch response: <Response [200]>
+2018-07-28 17:05:48,865 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:49,973 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:49,996 elasticsearch response: <Response [200]>
+2018-07-28 17:05:50,099 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:51,250 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:51,275 elasticsearch response: <Response [200]>
+2018-07-28 17:05:51,378 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:52,491 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:52,510 elasticsearch response: <Response [200]>
+2018-07-28 17:05:52,620 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:53,699 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:53,727 elasticsearch response: <Response [200]>
+2018-07-28 17:05:53,824 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:54,865 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:54,881 elasticsearch response: <Response [200]>
+2018-07-28 17:05:54,975 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:56,072 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:56,096 elasticsearch response: <Response [200]>
+2018-07-28 17:05:56,192 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:57,287 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:57,307 elasticsearch response: <Response [200]>
+2018-07-28 17:05:57,400 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:58,473 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:05:58,496 elasticsearch response: <Response [200]>
+2018-07-28 17:05:58,584 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:05:59,642 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:05:59,667 elasticsearch response: <Response [200]>
+2018-07-28 17:05:59,766 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:00,854 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:00,874 elasticsearch response: <Response [200]>
+2018-07-28 17:06:00,970 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:02,081 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:02,095 elasticsearch response: <Response [200]>
+2018-07-28 17:06:02,185 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:04,583 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:04,607 elasticsearch response: <Response [200]>
+2018-07-28 17:06:04,707 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:05,769 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:05,790 elasticsearch response: <Response [200]>
+2018-07-28 17:06:05,875 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:07,577 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:07,601 elasticsearch response: <Response [200]>
+2018-07-28 17:06:07,710 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:08,894 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:08,919 elasticsearch response: <Response [200]>
+2018-07-28 17:06:09,017 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:10,106 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:10,130 elasticsearch response: <Response [200]>
+2018-07-28 17:06:10,317 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:11,389 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:11,407 elasticsearch response: <Response [200]>
+2018-07-28 17:06:11,576 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:12,673 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:12,693 elasticsearch response: <Response [200]>
+2018-07-28 17:06:12,812 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:13,881 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:13,912 elasticsearch response: <Response [200]>
+2018-07-28 17:06:14,021 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:15,155 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:15,185 elasticsearch response: <Response [200]>
+2018-07-28 17:06:15,307 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:16,425 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:16,441 elasticsearch response: <Response [200]>
+2018-07-28 17:06:16,532 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:17,908 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:17,932 elasticsearch response: <Response [200]>
+2018-07-28 17:06:18,027 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:20,585 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:20,607 elasticsearch response: <Response [200]>
+2018-07-28 17:06:20,698 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:21,765 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:21,783 elasticsearch response: <Response [200]>
+2018-07-28 17:06:21,888 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:22,976 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:22,999 elasticsearch response: <Response [200]>
+2018-07-28 17:06:23,113 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:24,337 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:24,362 elasticsearch response: <Response [200]>
+2018-07-28 17:06:24,480 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:25,626 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:25,649 elasticsearch response: <Response [200]>
+2018-07-28 17:06:25,756 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:26,829 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:26,846 elasticsearch response: <Response [200]>
+2018-07-28 17:06:27,011 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:28,099 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:28,123 elasticsearch response: <Response [200]>
+2018-07-28 17:06:28,223 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:29,317 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:29,345 elasticsearch response: <Response [200]>
+2018-07-28 17:06:29,456 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:30,556 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 246
+2018-07-28 17:06:30,574 elasticsearch response: <Response [200]>
+2018-07-28 17:06:30,678 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:31,716 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:31,729 elasticsearch response: <Response [200]>
+2018-07-28 17:06:31,836 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:32,934 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:32,949 elasticsearch response: <Response [200]>
+2018-07-28 17:06:33,043 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:34,205 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:34,232 elasticsearch response: <Response [200]>
+2018-07-28 17:06:34,346 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:35,424 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:35,451 elasticsearch response: <Response [200]>
+2018-07-28 17:06:35,570 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:36,768 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:36,790 elasticsearch response: <Response [200]>
+2018-07-28 17:06:36,891 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:38,045 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:38,061 elasticsearch response: <Response [200]>
+2018-07-28 17:06:38,155 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:39,296 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:39,327 elasticsearch response: <Response [200]>
+2018-07-28 17:06:39,420 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:40,626 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:40,642 elasticsearch response: <Response [200]>
+2018-07-28 17:06:40,751 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:41,887 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:41,903 elasticsearch response: <Response [200]>
+2018-07-28 17:06:42,012 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:43,140 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 248
+2018-07-28 17:06:43,155 elasticsearch response: <Response [200]>
+2018-07-28 17:06:43,249 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:44,309 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:44,325 elasticsearch response: <Response [200]>
+2018-07-28 17:06:44,450 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:45,547 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:45,578 elasticsearch response: <Response [200]>
+2018-07-28 17:06:45,672 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:46,767 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:46,783 elasticsearch response: <Response [200]>
+2018-07-28 17:06:46,892 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:48,035 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:48,066 elasticsearch response: <Response [200]>
+2018-07-28 17:06:48,160 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:49,278 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 248
+2018-07-28 17:06:49,294 elasticsearch response: <Response [200]>
+2018-07-28 17:06:49,387 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:50,466 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:50,482 elasticsearch response: <Response [200]>
+2018-07-28 17:06:50,593 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:52,391 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:52,423 elasticsearch response: <Response [200]>
+2018-07-28 17:06:52,533 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:54,148 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:54,148 elasticsearch response: <Response [200]>
+2018-07-28 17:06:54,257 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:55,367 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:55,398 elasticsearch response: <Response [200]>
+2018-07-28 17:06:55,507 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:57,058 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:57,089 elasticsearch response: <Response [200]>
+2018-07-28 17:06:57,183 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:58,449 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:58,465 elasticsearch response: <Response [200]>
+2018-07-28 17:06:58,561 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:06:59,623 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:06:59,639 elasticsearch response: <Response [200]>
+2018-07-28 17:06:59,733 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:00,829 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:00,860 elasticsearch response: <Response [200]>
+2018-07-28 17:07:00,954 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:02,032 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:02,048 elasticsearch response: <Response [200]>
+2018-07-28 17:07:02,142 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:03,270 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:03,285 elasticsearch response: <Response [200]>
+2018-07-28 17:07:03,396 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:04,490 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:04,506 elasticsearch response: <Response [200]>
+2018-07-28 17:07:04,618 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:05,743 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:05,758 elasticsearch response: <Response [200]>
+2018-07-28 17:07:05,838 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:07,029 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:07,060 elasticsearch response: <Response [200]>
+2018-07-28 17:07:07,169 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:08,233 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:08,265 elasticsearch response: <Response [200]>
+2018-07-28 17:07:08,358 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:09,609 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:09,624 elasticsearch response: <Response [200]>
+2018-07-28 17:07:09,734 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:11,267 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:11,283 elasticsearch response: <Response [200]>
+2018-07-28 17:07:11,408 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:12,535 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:12,551 elasticsearch response: <Response [200]>
+2018-07-28 17:07:12,660 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:13,785 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:13,816 elasticsearch response: <Response [200]>
+2018-07-28 17:07:13,941 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:15,046 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:15,077 elasticsearch response: <Response [200]>
+2018-07-28 17:07:15,202 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:16,350 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:16,366 elasticsearch response: <Response [200]>
+2018-07-28 17:07:16,507 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:17,841 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:17,857 elasticsearch response: <Response [200]>
+2018-07-28 17:07:17,951 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:19,149 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:19,181 elasticsearch response: <Response [200]>
+2018-07-28 17:07:19,290 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:20,560 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:20,576 elasticsearch response: <Response [200]>
+2018-07-28 17:07:20,701 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:21,810 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:21,825 elasticsearch response: <Response [200]>
+2018-07-28 17:07:21,966 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:23,140 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:23,155 elasticsearch response: <Response [200]>
+2018-07-28 17:07:23,280 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:24,398 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:24,429 elasticsearch response: <Response [200]>
+2018-07-28 17:07:24,523 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:25,633 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:25,649 elasticsearch response: <Response [200]>
+2018-07-28 17:07:25,805 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:26,899 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:26,930 elasticsearch response: <Response [200]>
+2018-07-28 17:07:27,024 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:28,152 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:28,167 elasticsearch response: <Response [200]>
+2018-07-28 17:07:28,277 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:29,372 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:29,388 elasticsearch response: <Response [200]>
+2018-07-28 17:07:29,513 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:30,735 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:30,766 elasticsearch response: <Response [200]>
+2018-07-28 17:07:30,876 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:32,004 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:32,035 elasticsearch response: <Response [200]>
+2018-07-28 17:07:32,144 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:33,225 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:33,241 elasticsearch response: <Response [200]>
+2018-07-28 17:07:33,334 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:34,444 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:34,475 elasticsearch response: <Response [200]>
+2018-07-28 17:07:34,588 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:35,744 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:35,759 elasticsearch response: <Response [200]>
+2018-07-28 17:07:35,868 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:36,962 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:36,993 elasticsearch response: <Response [200]>
+2018-07-28 17:07:37,102 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:38,215 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:38,231 elasticsearch response: <Response [200]>
+2018-07-28 17:07:38,325 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:39,388 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:39,418 elasticsearch response: <Response [200]>
+2018-07-28 17:07:39,504 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:40,632 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:40,648 elasticsearch response: <Response [200]>
+2018-07-28 17:07:40,741 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:41,913 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 248
+2018-07-28 17:07:41,945 elasticsearch response: <Response [200]>
+2018-07-28 17:07:42,038 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:43,196 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:43,212 elasticsearch response: <Response [200]>
+2018-07-28 17:07:43,321 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:44,384 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:44,415 elasticsearch response: <Response [200]>
+2018-07-28 17:07:44,509 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:45,557 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:45,589 elasticsearch response: <Response [200]>
+2018-07-28 17:07:45,718 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:46,848 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:46,862 elasticsearch response: <Response [200]>
+2018-07-28 17:07:46,969 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:48,042 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:48,062 elasticsearch response: <Response [200]>
+2018-07-28 17:07:48,159 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:49,384 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:49,411 elasticsearch response: <Response [200]>
+2018-07-28 17:07:49,556 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:50,910 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:50,942 elasticsearch response: <Response [200]>
+2018-07-28 17:07:51,040 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:52,134 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:52,149 elasticsearch response: <Response [200]>
+2018-07-28 17:07:52,243 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:53,338 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:53,354 elasticsearch response: <Response [200]>
+2018-07-28 17:07:53,448 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:54,666 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:54,698 elasticsearch response: <Response [200]>
+2018-07-28 17:07:54,791 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:56,074 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:56,105 elasticsearch response: <Response [200]>
+2018-07-28 17:07:56,199 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:57,475 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:57,507 elasticsearch response: <Response [200]>
+2018-07-28 17:07:57,605 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:58,727 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:58,743 elasticsearch response: <Response [200]>
+2018-07-28 17:07:58,852 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:07:59,956 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:07:59,971 elasticsearch response: <Response [200]>
+2018-07-28 17:08:00,081 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:01,145 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:01,161 elasticsearch response: <Response [200]>
+2018-07-28 17:08:01,239 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:02,348 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:02,364 elasticsearch response: <Response [200]>
+2018-07-28 17:08:02,457 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:03,539 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:03,570 elasticsearch response: <Response [200]>
+2018-07-28 17:08:03,680 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:04,771 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:04,787 elasticsearch response: <Response [200]>
+2018-07-28 17:08:04,880 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:05,964 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:05,979 elasticsearch response: <Response [200]>
+2018-07-28 17:08:06,104 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:07,161 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:07,192 elasticsearch response: <Response [200]>
+2018-07-28 17:08:07,286 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:08,349 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:08,364 elasticsearch response: <Response [200]>
+2018-07-28 17:08:08,474 Starting new HTTPS connection (1): search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443
+2018-07-28 17:08:09,902 https://search-ticker-sentiment-ohr4wryq6vcybcoqvqumx5bezm.us-east-2.es.amazonaws.com:443 "PUT /twitter/tweet/_bulk HTTP/1.1" 200 247
+2018-07-28 17:08:09,918 elasticsearch response: <Response [200]>

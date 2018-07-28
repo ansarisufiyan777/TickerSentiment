@@ -1,5 +1,7 @@
 import logging
+
 from six.moves import configparser
+
 
 class Config:
 
@@ -29,15 +31,20 @@ class Config:
 
     @staticmethod
     def get_twitter_config():
-            c = Config.get_config()
-            consumer_key = c.get('TweetStreaming', 'consumer_key')
-            consumer_secret = c.get('TweetStreaming', 'consumer_secret')
-            access_token = c.get('TweetStreaming', 'access_token')
-            access_token_secret = c.get('TweetStreaming', 'access_token_secret')
-            return consumer_key, consumer_secret, access_token, access_token_secret
+        c = Config.get_config()
+        consumer_key = c.get('TweetStreaming', 'consumer_key')
+        consumer_secret = c.get('TweetStreaming', 'consumer_secret')
+        access_token = c.get('TweetStreaming', 'access_token')
+        access_token_secret = c.get('TweetStreaming', 'access_token_secret')
+        return consumer_key, consumer_secret, access_token, access_token_secret
 
     @staticmethod
-    def getAwsConfig():
+    def get_aws_config():
         c = Config.get_config()
-        end_point = c.get('Elasticsearch','end_point')
+        end_point = c.get('Elasticsearch', 'end_point')
         return end_point
+
+    @staticmethod
+    def get_vantage_url(ticker):
+        c = Config.get_config()
+        return c.get('AlphaVantage', 'url') % ticker

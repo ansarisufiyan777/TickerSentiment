@@ -1,20 +1,18 @@
 from __future__ import print_function
 
 import json
-
-from dateutil.parser import parse
-
 from datetime import datetime
 
+from dateutil.parser import parse
 from textblob import TextBlob
 
-from aws.aws_message import AwsMessages
+from aws.aws_message import AwsMessage
 
 
 class SentimentPolarity:
     @classmethod
-    def do_work(cls, data):
-        msg = cls.get_json(data)
+    def do_work(cls, data, location):
+        msg = cls.get_json(data, location)
         text = msg["text"]
         try:
             testimonial = TextBlob(text)
@@ -33,10 +31,10 @@ class SentimentPolarity:
             print(emotion)
 
         msg["sentiment"] = emotion
-        AwsMessages.upload_msg(msg,AwsMessages.twitter_index,AwsMessages.twitter_mapping)
+        AwsMessage.upload_msg(msg, AwsMessage.twitter_address)
 
     @classmethod
-    def get_json(cls, message):
+    def get_json(cls, message, location):
         msg = json.loads(message)
         timezone_offset = datetime.utcnow() - datetime.now()
         dt = parse(msg['created_at'])
@@ -47,6 +45,7 @@ class SentimentPolarity:
             'text': msg['text'],
             'profile_image_url': msg['user']['profile_image_url'],
             'sentiment': '',
-            message: message
+            'location': location,
+            'message': msg['text']
         }
         return tweet;

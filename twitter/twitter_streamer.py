@@ -1,9 +1,9 @@
 from tweepy import Stream
 from tweepy.streaming import StreamListener
-from elasticsearch import Elasticsearch
 
 # This is a basic listener that just prints received tweets to stdout.
 from sentiment.sentiment import SentimentPolarity
+from stocks.stocks_data import StocksData
 from twitter.twitter_auth import TwitterAuth
 from util.config import Config
 
@@ -13,7 +13,7 @@ class TwitterStreamer(StreamListener):
 
     def on_data(self, data):
         print('Twitteer data in %s', data)
-        SentimentPolarity.do_work(data)
+        SentimentPolarity.do_work(data, 'Twitter')
         return True
 
     def on_error(self, status):
@@ -27,5 +27,9 @@ if __name__ == '__main__':
     stream = Stream(TwitterAuth.get_auth(), l)
 
     # This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
-    stream.filter(track=['Google', 'Facebook', 'Apple', 'Amazon', 'Linked', 'Microsoft', 'Bloomberg',
-                         'Tweet', 'Tesla'], languages=['en'])
+    json_object = StocksData.fetch_ticker_list()
+    tickers = []
+    for (attribute, value) in json_object.items():
+        print(attribute, value)
+        tickers.append(attribute)
+    stream.filter(track=attribute, languages=['en'])
